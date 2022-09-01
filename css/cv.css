@@ -1,0 +1,188 @@
+.personal-info ,.technical-skills{
+    width:calc(100%/2);
+    height:100%;
+ /*   border:1px solid #000;*/
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.personal-info{
+    border-width:0 2px 0 0;
+    border-style: solid;
+    border-color: #8A3FFC;
+  
+}
+.personal-info > section{
+    width:90%;
+    flex:0 0 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+    align-items: center;
+    
+}
+.personal-info > section:first-of-type{
+    flex-direction: column;
+}
+.personal-info > section > h1{
+    margin:0;
+    font-family: 'Helvetica';
+}
+.personal-info > section > span{
+    font-family: 'Helvetica';
+    
+}
+.personal-info > section:first-of-type >span {
+    color: rgba(0,0,0,.7);
+}
+.personal-info > section > span{
+    padding-left:3%;
+    font-size: 1.1rem;
+    font-family: 'Helvetica';
+}
+.personal-info > section > img {
+    padding-left:1%;
+}
+.technical-skills > h1{
+    margin:0;
+    font-family: 'Helvetica';
+    padding-left:15%;
+}
+.technical-skills > div {
+    width:100%;
+    flex:0 0 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items: center;
+    display: flex;
+}
+.technical-skills > div > small{
+    flex: 0 0 20%;
+    text-align: center;
+    font-size: 1rem;
+    font-family: 'Helvetica';
+}
+.technical-skills > div > .progress{
+    flex: 0 0 70%;
+   background-color: rgba(15,15,15,.8);
+   display: flex;
+   position: relative;
+   height:30%;
+   border-top-right-radius: 3px;
+   border-bottom-right-radius: 3px;
+
+}
+.technical-skills > div > .progress > span + span{
+    width:0%;
+    background-color: #8A3FFC;
+    position: absolute;
+    left:0;
+    z-index: 1;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+.tabs-container input[type="radio"]:checked + label + .content > .technical-skills > div > .progress > span + span {
+    animation:  progress_html_css 1s 1 ease-in-out;
+    animation-fill-mode: forwards;
+    transition: all 1s ease-in-out;
+}
+.tabs-container input[type="radio"]:checked + label + .content > .technical-skills > div:nth-child(4) > .progress > span + span {
+    animation:  progress_bootstrap_javascript 1s 1 ease-in-out;
+    animation-fill-mode: forwards;
+    transition: all 1s ease-in-out;
+}
+.tabs-container input[type="radio"]:checked + label + .content > .technical-skills > div:nth-child(5) > .progress > span + span {
+    animation:  progress_bootstrap_javascript 1s 1 ease-in-out;
+    animation-fill-mode: forwards;
+    transition: all 1s ease-in-out;
+}
+.tabs-container input[type="radio"]:checked + label + .content > .technical-skills > div:nth-child(6) > .progress > span + span {
+    animation:  progress_typescript 1s 1 ease-in-out;
+    animation-fill-mode: forwards;
+    transition: all 1s ease-in-out;
+}
+.tabs-container input[type="radio"]:checked + label + .content > .technical-skills > div:nth-child(7) > .progress > span + span {
+    animation:  progress_java 1s 1 ease-in-out;
+    animation-fill-mode: forwards;
+    transition: all 1s ease-in-out;
+}
+.tabs-container input[type="radio"]:checked + label + .content > .technical-skills > div:nth-child(8) > .progress > span + span {
+    animation:  progress_angular 1s 1 ease-in-out;
+    animation-fill-mode: forwards;
+    transition: all 1s ease-in-out;
+}
+.tabs-container input[type="radio"]:checked + label + .content > .technical-skills > div:nth-child(9) > .progress > span + span {
+    animation:  progress_oop 1s 1 ease-in-out;
+    animation-fill-mode: forwards;
+    transition: all 1s ease-in-out;
+}
+
+@keyframes progress_html_css {
+    to{
+        width:100%;
+        transition: all .5s ease-in-out;
+    }
+   
+}
+@keyframes progress_bootstrap_javascript {
+    to{
+        width:85%;
+        transition: all .5s ease-in-out;
+    }
+   
+}
+@keyframes progress_typescript {
+    to{
+        width:95%;
+        transition: all .5s ease-in-out;
+    }
+   
+}
+@keyframes progress_java {
+    to{
+        width:60%;
+        transition: all .5s ease-in-out;
+    }
+   
+}
+@keyframes progress_angular {
+    to{
+        width:65%;
+        transition: all .5s ease-in-out;
+    }
+   
+}
+@keyframes progress_oop {
+    to{
+        width:95%;
+        transition: all .5s ease-in-out;
+    }
+   
+}
+
+.technical-skills > div > .progress > span{
+    color: #FFFFFF;
+    position: absolute;
+    top:0;
+    left:85%;
+    z-index: 5;
+    width:22%;
+    height:100%;
+    text-align: center;
+    font-size: .9rem;
+    font-family: 'Helvetica';
+    border-top-right-radius: 3px;
+   border-bottom-right-radius: 3px;
+
+
+}
+.technical-skills > div > .progress:nth-child(1) > span{
+    padding-right: 1%;
+}
+.technical-skills > div > .progress:nth-child(1) > span{
+    padding-right: 1%;
+}
+

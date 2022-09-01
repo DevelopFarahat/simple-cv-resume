@@ -1,0 +1,77 @@
+.feedback{
+    width:60%;
+    height:60%;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    align-items:center;
+    border:1px solid #040000;
+    border-radius: 10px;
+}
+textarea[name="feedback"]{
+    flex:0 0 90%;
+    height:50%;
+    padding:10px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: 'Helvetica';
+
+}
+.review-icon-container{
+    width:85px;
+    height:85px;
+    position: absolute;
+    top:3%;
+    border-radius: 50%;
+}
+.review-icon-container img {
+    position: absolute;
+    top:10%;
+    left:10%;
+}
+.content > label{
+    flex:0 0 5%;
+    width:20%;
+    background:#8A3FFC;
+    border-color: #040000;
+    padding:10px;
+    text-align: center;
+    font-family: 'Helvetica';
+    cursor: pointer;
+    order: 2;
+    position: relative;
+    top:-22%;
+    color: #FFFFFF;
+}
+.content > label:hover{
+    background-color:rgba(138,63,252,.8);  
+}
+.content >  label{
+    cursor: pointer;
+}
+.content  input[type="radio"]:checked + label + .thankYou + .feedback , input[type="radio"]:checked + label[for="Feedback"]{
+    display: none;
+}
+.content input[type="radio"]:checked + label + .thankYou{
+    display: flex !important;
+}
+.send-feedback{
+    flex-direction: column !important;
+    position: relative;
+}
+.thankYou{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100% !important;
+    height:100% !important;
+    display: none !important;
+  
+}
+.thankYou h1{
+    text-align: center;
+    margin: 0;
+    font-family: 'Helvetica';
+    line-height: 1.5;
+
+}

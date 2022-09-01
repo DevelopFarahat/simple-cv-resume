@@ -1,0 +1,130 @@
+@import url("hobbies.css");
+@import url("feedback.css");
+@import url("contactUs.css");
+@import url("cv.css");
+@import url("countries.css");
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body,html{
+    height:100%;
+}
+
+.tabs-container{
+    width:100%;
+    height:9%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+
+}
+
+.tabs-container input[type="radio"]{
+    display: none;
+}
+.tabs-container label:not([for='Feedback'],[for="FirstName"],[for="LastName"],[for="e-mail"],[for="terms&condition_box"]){
+    width: calc(55%/7);
+    height:100%;
+    font-size: 1rem;
+    text-transform: capitalize;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    padding:16px;
+    cursor: pointer;
+}
+.tabs-container label:first-of-type:not([for="Feedback"],[for="FirstName"],[for="LastName"],[for="e-mail"],[for="terms&condition_box"]){
+    width:45%;
+    text-align:start;
+    padding:16px 90px;
+}
+  
+.tabs-container label:not([for='Home'],[for='Feedback'],[for="FirstName"],[for="LastName"],[for="e-mail"],[for="terms&condition_box"]):hover{
+    background-color: #8A3FFC;
+    transition: all .3s linear;
+    color: #FFFFFF;
+}
+.tabs-container .content{
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    width:100%;
+    height:85vh;
+    background:#ffff;
+    order: 1;
+    display: none;
+}
+
+.tabs-container input[type="radio"]:checked + label + .content{
+    display: flex;
+}
+.tabs-container input[type="radio"]:checked + label:not([for='Home'],[for='Feedback'],[for="FirstName"],[for="LastName"],[for="e-mail"],[for="terms&condition_box"]){
+    background-color: #8A3FFC;
+    color: #FFFFFF;
+    border-width: 0 0 3px 0;
+    border-style: solid;
+    border-color: #E8110F;
+}
+.content > div:not(.feedback,.personal-info,.technical-skills,.countries-container) {
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items: center;
+    width:calc(90%/2);
+    height:90%;
+}
+.headlines{
+    flex:0 0 75%;
+    height:30%;
+    order: 2;
+}
+.headlines h1{
+    margin:0;
+    text-align: center;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    font-family: 'Helvetica';
+    letter-spacing: .5px;
+    word-spacing: 1px;
+    line-height: 1.5;
+    font-weight: bold;
+}
+.headlines span{
+    font-size: 1rem;
+    font-family: 'Helvetica';
+    letter-spacing: .5px;
+    word-spacing: 1px;
+    line-height: 1.5;
+}
+.headlines span > span {
+    display: inline-block;
+    padding-left:4%;
+}
+.social{
+    flex:0 0 10%;
+    height:90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    order: 1;
+}
+.fa-brands{
+    font-size: 2rem;
+}
+.fa-brands:not(.fa-moon):hover{
+    cursor: pointer;
+    color: #8A3FFC;
+    transition: all .3s ease-in-out;
+}
+.fa-moon{
+    font-size: 1.5rem;
+    font-family: 'Helvetica';
+}
+
